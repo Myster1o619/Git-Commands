@@ -1,0 +1,20 @@
+GIT TERMINAL COMMANDS
+
+- git status
+
+- git log
+
+- git diff
+
+- git diff {compare1} {compare2}
+
+- git stash *add a message here*
+
+- git stash list
+
+- git stash pop
+
+- git stash drop
+
+- git stash apply "stash@{x}" / should work with git stash pop "stash@{x}"
+**git stash apply - just applies the stash, it does not pop the stash
