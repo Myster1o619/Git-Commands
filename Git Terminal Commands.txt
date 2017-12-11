@@ -18,3 +18,15 @@ GIT TERMINAL COMMANDS
 
 - git stash apply "stash@{x}" / should work with git stash pop "stash@{x}"
 **git stash apply - just applies the stash, it does not pop the stash
+
+
+//*REMOVING UNTRACKED ITEMS FROM GIT BRANCH*//
+
+- git clean -n => show what will be deleted by using the -n option
+
+- git clean -f
+
+To remove directories: git clean -f -d
+To remove files: git clean -f -X
+To remove ignored & non-ignored files:
+git clean -f -x
