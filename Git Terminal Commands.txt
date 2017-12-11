@@ -1,3 +1,29 @@
+You can do a commit anytime you want - all your commits are local. It is only when you need to push to the server that you need to have the server's latest copy. So it is a good idea to always pull from the remote repository before you push your changes.
+
+Pull from the remote branch as often as possible in order to minimise large merges and possible conflicts.
+Commit your changes before pulling so that commits are merged with the remote changes during the pull. This may result in conflicts which you can begin to deal with knowing that your code is already committed should anything go wrong and you have to abort the merge.
+
+Steps to take:
+
+1. stash local changes: git stash
+2. update the branch to the latest code: git pull
+3. merge local changes into the latest code: git stash apply
+4. add, commit, and push your changes:
+	git add
+	git commit
+	git push
+
+
+//* git fetch vs git pull *//
+
+=> when using pull: git tries to automatically do the work for you
+It = context sensitive, so git will merge any pulled commits into the branch you are currently working in
+pull automatically merges to commits without letting you review them first
+If you don't closely manage the branches, may run into frequent conflicts
+
+=> when using fetch: git gathers any commits from target branch that do not exist in your current branch and stores them in your local repository
+However, it does not merge them with your current branch - this = useful if you need to keep your repository up to date, but are working on something that might break if you update your files
+
 GIT TERMINAL COMMANDS
 
 - git status
