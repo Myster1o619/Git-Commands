@@ -60,7 +60,8 @@ To remove ignored & non-ignored files:
 git clean -f -x
 
 
-/* Create Branch:
+/************************************ 
+Create Branch:
 
 git checkout -b branch_name
 
@@ -69,15 +70,18 @@ git checkout -b branch_name
 alternative for pushing this branch to remote repository and setting it
 to **upstream** {still not sure what this does}:
 
-git push -u origin branch_name
+git push -u origin branch_name => SO SHOULD PROBABLY START USING THIS?
 
-*/
+************************************/
 
---SHOWING STAGED CHANGES--
+-----SHOWING STAGED CHANGES-----
 
 - git status -v 
 
 - git diff --cached
+
+- git diff --staged : for Staging Area vs. Repository comparison
+- git diff : For Working Area vs Repository comparison
 
 **in General:**
 
