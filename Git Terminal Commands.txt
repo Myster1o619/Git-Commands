@@ -76,6 +76,14 @@ git push -u origin branch_name => SO SHOULD PROBABLY START USING THIS?
 And if checking out a branch which you want to set as the upstream:
 git checkout -b branch_name --track
 
+Setting a new upstream branch - examples:
+
+- git branch --set-up-stream-to origin master => branch master set up to track REMOTE branch master from origin
+
+- so playing around wtih "origin" will change what the upstream branch will be set to? Either local or remote?
+
+
+
 ************************************/
 
 -----SHOWING STAGED CHANGES-----
