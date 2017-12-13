@@ -26,6 +26,8 @@ However, it does not merge them with your current branch - this = useful if you 
 
 GIT TERMINAL COMMANDS
 
+- git branch -a: see all the available branches on the repository
+
 - git status
 
 - git log
@@ -56,3 +58,17 @@ To remove directories: git clean -f -d
 To remove files: git clean -f -X
 To remove ignored & non-ignored files:
 git clean -f -x
+
+
+/* Create Branch:
+
+git checkout -b branch_name
+
+--make changes--
+
+alternative for pushing this branch to remote repository and setting it
+to **upstream** {still not sure what this does}:
+
+git push -u origin branch_name
+
+*/
