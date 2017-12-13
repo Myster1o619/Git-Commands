@@ -34,7 +34,7 @@ GIT TERMINAL COMMANDS
 
 - git diff
 
-- git diff {compare1} {compare2}
+- git diff {compare1} {compare2} ***so in general, compare master to your other created branch***
 
 - git stash *add a message here*
 
