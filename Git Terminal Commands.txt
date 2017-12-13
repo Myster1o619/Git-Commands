@@ -72,11 +72,9 @@ to **upstream** {still not sure what this does}:
 
 git push -u origin branch_name => SO SHOULD PROBABLY START USING THIS?
 
-can also use when initially creating the branch:
-git branch --set-upstream-to origin branch_name
 
 And if checking out a branch which you want to set as the upstream:
-git checkout branch_name --track ??
+git checkout -b branch_name --track
 
 ************************************/
 
