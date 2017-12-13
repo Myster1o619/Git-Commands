@@ -72,3 +72,18 @@ to **upstream** {still not sure what this does}:
 git push -u origin branch_name
 
 */
+
+--SHOWING STAGED CHANGES--
+
+- git status -v 
+
+- git diff --cached
+
+**in General:**
+
+- git diff : show the changes between working directory and the index. Shows what has been changed, but is not staged for a commit.
+
+- git diff --cached : shows the changes between the index and the HEAD (which is the last commit on the branch). Shows what has been added to the index and staged for a commit.
+
+- git diff HEAD : shows all changes between the working directory and HEAD (which includes changes in the index). This shows all the changes since the last commit, whether or not they have been staged for commit or not.
+
