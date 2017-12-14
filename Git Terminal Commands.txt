@@ -37,7 +37,22 @@ So difference will be:
 
 	=> if you do git fetch, will just fetch all the changes in the remote repository (GitHub) and 	move the origin/master pointer to HEAD. Meanwhile, local branch master will keep pointing to 	where it is (it will not move to the HEAD pointer of origin/master)
 
-	=> if you do a git pull -> it will basically perform git fetch and merge any new changes to 	your master branch (local?) and move this branches pointer to HEAD (origin/master?) 
+	=> if you do a git pull -> it will basically perform git fetch and merge any new changes to 	your master branch (local?) and move this branches pointer to HEAD (origin/master?)
+
+** origin/master = local branch that is COPY of master on origin
+When you fetch, you update local:/origin/master
+Once you really understand that everything in git is a branch, this makes a lot of sense and is very powerful way to maintain different change-sets, make quick local branches, merge and rebase, and generally get a lot of value out of the branching model
+
+== typical kind of scenario using git fetch command ==
+
+1. update local repo from the remote (but do not merge):
+	git fetch
+
+2. after downloading updates, see the differences:
+	git diff master origin/master
+
+3. if happy with differences/updates, merge:
+	git pull 
 
 GIT TERMINAL COMMANDS
 
