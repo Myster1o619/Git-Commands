@@ -24,6 +24,21 @@ If you don't closely manage the branches, may run into frequent conflicts
 => when using fetch: git gathers any commits from target branch that do not exist in your current branch and stores them in your local repository
 However, it does not merge them with your current branch - this = useful if you need to keep your repository up to date, but are working on something that might break if you update your files
 
+One use case of git fetch is that the following commands will tell you of any changes in the remote branch since your last pull => allowing you to check before doing an actual pull, which could change files in your current branch and working copy:
+
+- git fetch
+- git diff ...origin	***I am assuming the ... means your current local branch?***
+
+*** master in your localhost is a branch => when you clone a repository you fetch the entire repository to your local host. Means that at the time you have an origin/master pointer to HEAD and master (local) pointing to the same HEAD
+
+When you start working and do commits you advance the master pointer to HEAD + your commits. But the origin/master pointer is still pointing to what it was when you cloned.
+
+So difference will be:
+
+	=> if you do git fetch, will just fetch all the changes in the remote repository (GitHub) and 	move the origin/master pointer to HEAD. Meanwhile, local branch master will keep pointing to 	where it is (it will not move to the HEAD pointer of origin/master)
+
+	=> if you do a git pull -> it will basically perform git fetch and merge any new changes to 	your master branch (local?) and move this branches pointer to HEAD (origin/master?) 
+
 GIT TERMINAL COMMANDS
 
 - git branch -a: see all the available branches on the repository
