@@ -1,3 +1,26 @@
+origin master is two separate things:
+
+=> master = LOCAL BRANCH
+=> origin = REMOTE 
+
+origin/master is one thing: = REMOTE BRANCH WHICH IS A LOCAL COPY OF THE BRANCH NAMED "master" ON THE REMOTE NAMED "origin"
+
+Example: Pull in 2 steps:
+
+Since origin/master is a branch, it can be merged:
+
+1. fetch "master" from the remote "origin"
+The "master" branch on "origin" will be fetched, the local copy of this will be called "origin/master"
+
+	- git fetch origin master
+Then merge origin/master into master
+
+	- git merge origin/master
+Then you can push your new changes in "master" back to "origin":
+	- git push origin master
+
+
+
 You can do a commit anytime you want - all your commits are local. It is only when you need to push to the server that you need to have the server's latest copy. So it is a good idea to always pull from the remote repository before you push your changes.
 
 Pull from the remote branch as often as possible in order to minimise large merges and possible conflicts.
@@ -65,6 +88,9 @@ GIT TERMINAL COMMANDS
 - git diff
 
 - git diff {compare1} {compare2} ***so in general, compare master to your other created branch***
+- git diff <remote-tracking-branch> <local branch> => SHOWS WHAT IS GOING TO BE DROPPED AND WHAT IT GOING TO BE ADDED IF YOU PUSH LOCAL BRANCH
+
+- git diff @{upstream} => if you're on given branch, and you want to compare it with an upstream branch you are tracking
 
 - git stash *add a message here*
 
